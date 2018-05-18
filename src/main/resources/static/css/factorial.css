@@ -1,0 +1,48 @@
+.code{
+    font: 12px Open Sans;
+}
+
+.number{
+    font: 12px Open Sans;
+    dy: 1em;
+    text-anchor: middle;
+}
+
+
+#slider-range-max{
+    width: 200px;
+    margin: 15px;
+    position: absolute;
+    left: 270px;
+    top: 2px;
+}
+
+
+#inputButton{
+    position: absolute;
+    left: 180px;
+    top: 10px;
+}
+
+#span1{
+    position: absolute;
+    left:20px;
+    top:13px;
+    font: 14px Open Sans;
+    color: #b2b1b1;
+}
+
+.text-input{
+    position: absolute;
+    left: 65px;
+    top: 10px;
+    width: 100px;
+    height: 22px;
+}
+
+
+#popButton{
+    position: absolute;
+    left: 265px;
+    top: 10px;
+}

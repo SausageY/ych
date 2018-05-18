@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>数据结构演示系统</title>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/factorial.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" media="screen" type="text/css" />
+    <script src="js/index.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/nqueens.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<div class="sidebar">
+    <h1><i class="fa fa-bars push"></i>毕业 <span class="color">设计</span></h1>
+    <ul class="out">
+        <li><a href="#"><i class="fa fa-dashboard push"></i>Basic Structures<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+            <ul class="sub-menu">
+                <li><a id="stack" href="stack.html">Stack<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a id="list" href="list.html">List<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a id="queue" href="queue.html">Queue<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+            </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-picture-o push"></i>Indexing<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+            <ul class="sub-menu">
+                <li><a href="searchIndex.html">Binary and Linear Search<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="binarySearchTree.html">Binary Search Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="avlTree.html">AVL Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="#">Red-Black Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="#">Splay Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="hashtable.html">Open Hash Tables<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="#">Radix Tree<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="#">B Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="#">B+ Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+            </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-user push"></i>recursion<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+            <ul class="sub-menu">
+                <li><a  href="factorial.html">Factorial<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a  href="reverse.html">Reversing a String<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a  href="nqueens.html">N-Queens Problem<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+            </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-plane push"></i>Contact<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+    </ul>
+</div>
+<div id = "mainContent">
+    <svg id="canvas" width="1150" height="510">
+        <text id="code1" class="code" x="20px" y="30px">def calcQueens(size):</text>
+        <text id="code2" class="code"  y="45px" x="45px">board = { new Interger(-1)*size}</text>
+        <text id="code3" class="code"  y="60px" x="55px">return queens(board,0,size)</text>
+        <text id="code4" class="code" x="20px" y="90px">def queens(board,current,size):</text>
+        <text id="code5" class="code" x="45px" y="105px">if(current==size):</text>
+        <text id="code6" class="code" x="55px" y="120px">return true</text>
+        <text id="code7" class="code" x="45px" y="135px">else:</text>
+        <text id="code8" class="code" x="45px" y="150px">for i in range(size)</text>
+        <text id="code9" class="code" x="55px" y="165px">board[current]=i</text>
+        <text id="code10" class="code" x="55px" y="180px">if(noConficts(board,current)):</text>
+        <text id="code11" class="code" x="65px" y="195px">done = queens(board,current+1,size)</text>
+        <text id="code12" class="code" x="65px" y="210px">if(done):</text>
+        <text id="code13" class="code" x="75px" y="225px">return true</text>
+        <text id="code14" class="code" x="55px" y="240px">return false</text>
+        <text id="code15" class="code" x="20px" y="270px">def noConficts(board,cur):</text>
+        <text id="code16" class="code" x="45px" y="285px">for i in range(cur):</text>
+        <text id="code17" class="code" x="60px" y="300px">if(board[i]==board[cur]):</text>
+        <text id="code18" class="code" x="75px" y="315px">return false</text>
+        <text id="code19" class="code" x="60px" y="330px">if(cur-i==abs(board[cur]-board[i])):</text>
+        <text id="code20" class="code" x="75px" y="345px">return false</text>
+        <text id="code21" class="code" x="45px" y="360px">return true</text>
+    </svg>
+    <div id = "generalAnimationControlSection">
+        <a href="#" class="button gray" id="inputButton" onclick="input()">Queens</a>
+        <span id="span1">Board:</span>
+        <input type="text" class="text-input" value="" maxlength="1" placeholder="1~8">
+        <div id="slider-range-max"></div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="css/factorial.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.css" media="screen" type="text/css" />
+<script src="js/jquery.js"></script>
+<script src="js/index.js"></script>
+<script src="js/d3.js"></script>
+<script src="js/nqueens.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+</body>
+
+</html>
