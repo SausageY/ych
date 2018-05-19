@@ -142,11 +142,11 @@ function changeRectLength(node,x,delay) {
     setTimeout(function () {
         var ox=parseInt($("#rect"+node.id).attr("width"));
         d3.select("#rect"+node.id).transition().attr("width",ox+x);
-        if(node.child.length>0){
-            for(var i=0;i<node.child.length;i++){
-                $("#line"+node.child[i].id).attr("x1",parseInt(node.x)+35*i);
-            }
-        }
+        // if(node.child.length>0){
+        //     for(var i=0;i<node.child.length;i++){
+        //         $("#line"+node.child[i].id).attr("x1",parseInt(node.x)+35*i);
+        //     }
+        // }
     },delay/anSpeed)
 }
 
@@ -207,7 +207,7 @@ function sortLine(node,delay) {
     setTimeout(function () {
         if(node.child.length>0){
             for(var i=0;i<node.child.length;i++){
-                d3.select("#line"+node.child[i].id).attr("x1",node.x+i*35).attr("y1",node.y+30);
+                d3.select("#line"+node.child[i].id).attr("x1",parseInt($("#rect"+node.id).attr("x"))+i*35).attr("y1",parseInt($("#rect"+node.id).attr("y"))+30);
             }
         }
         },delay/anSpeed);

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>数据结构演示系统</title>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/stack.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" media="screen" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/tree.js"></script>
+    <script src="js/bTree.js"></script>
+    <script src="js/bTreeAnimation.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+
+<body>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<div class="sidebar">
+    <h1><i class="fa fa-bars push"></i>毕业 <span class="color">设计</span></h1>
+    <ul class="out">
+        <li><a href="#"><i class="fa fa-dashboard push"></i>Basic Structures<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+            <ul class="sub-menu">
+                <li><a id="stack" href="stack.html">Stack<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a id="list" href="list.html">List<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a id="queue" href="queue.html">Queue<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+            </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-picture-o push"></i>Indexing<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+            <ul class="sub-menu">
+                <li><a href="searchIndex.html">Binary and Linear Search<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="binarySearchTree.html">Binary Search Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="avlTree.html">AVL Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="#">Red-Black Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="#">Splay Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="hashtable.html">Open Hash Tables<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="#">Radix Tree<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="#">B Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a href="#">B+ Trees<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+            </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-user push"></i>recursion<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+            <ul class="sub-menu">
+                <li><a  href="factorial.html">Factorial<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a  href="reverse.html">Reversing a String<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                <li><a  href="nqueens.html">N-Queens Problem<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+            </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-plane push"></i>Contact<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+    </ul>
+</div>
+<div id = "mainContent">
+    <svg id="canvas" width="1150" height="510">
+        <text id="code1" class="code" x="20px" y="30px"></text>
+        <text id="code2" class="code"  y="45px" x="20px"></text>
+        <text id="code3" class="code"  y="60px" x="20px"></text>
+        <text id="code4" class="code" x="20px" y="75px"></text>
+        <text id="code5" class="code" x="20px" y="90px"></text>
+        <text id="code6" class="code" x="20px" y="105px"></text>
+        <text id="code7" class="code" x="20px" y="120px"></text>
+    </svg>
+    <div id = "generalAnimationControlSection" style="width:100%; position:fixed; bottom:0;">
+        <a href="#" class="button gray" id="inputButton" onclick="insert()">Insert</a>
+        <span id="span1">input:</span>
+        <input type="text" class="text-input" value="" maxlength="4" placeholder="0~9999">
+        <a href="#" class="button gray" id="popButton" onclick="del()">Delete</a>
+        <a href="#" class="button gray" id="cleanButton" onclick="autoTest()">Find</a>
+        <div id="slider-range-max" ></div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="css/stack.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.css" media="screen" type="text/css" />
+<script src="js/index.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/d3.js"></script>
+<script src="js/tree.js"></script>
+<script src="js/bTree.js"></script>
+<script src="js/bTreeAnimation.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+</body>
+
+</html>
